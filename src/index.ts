@@ -14,5 +14,3 @@ app.use(bodyParser.json());
 app.listen(HTTP_PORT, () => {
     console.log(`Application listening on port ${HTTP_PORT}`);
 });
-
-
