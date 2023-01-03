@@ -1,16 +1,15 @@
 //for logging and debugging 
 const getTimestamp = (): string => {
     return new Date().toISOString();
-}
+};
 
 const info = (namespace: string, message: string, object?: any) => {
-    if (object){
-        console.log(`[${getTimestamp}] [info] [${namespace}] [${message}]`, object);
-
-    } else{
-        console.log(`[${getTimestamp}] [info] [${namespace}] [${message}]`);
+    if (object) {
+        console.log(`[${getTimestamp()}] [info] [${namespace}] ${message}`, object);
+    } else {
+        console.log(`[${getTimestamp()}] [info] [${namespace}] ${message}`);
     }
-}
+};
 
 const warn = (namespace: string, message: string, object?: any) => {
     if (object) {
@@ -36,7 +35,7 @@ const debug = (namespace: string, message: string, object?: any) => {
     }
 };
 
-export default{
+export default {
     info,
     warn,
     error,
